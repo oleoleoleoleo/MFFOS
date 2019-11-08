@@ -49,7 +49,7 @@ $canvas.addEventListener('click', () => {
       game.reset();
   }
 });
-
+$canvas.addEventListener('contextmenu', event => event.preventDefault());
 window.addEventListener('mousemove', e => {
   setTimeout(function() {
     game.cursor.tailX = e.pageX - bounds.left - scrollX;
