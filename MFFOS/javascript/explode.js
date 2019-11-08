@@ -10,6 +10,7 @@ class Explode {
     // this.i = 0;
     this.explosion = new Image();
     this.explosion.src = './images/explosion.png';
+    this.explosion.onload;
     this.explodeArray = [
       [192, 192],
       [128, 192],
