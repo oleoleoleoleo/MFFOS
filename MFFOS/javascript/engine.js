@@ -44,7 +44,7 @@ class Engine {
     this.addBonus();
     this.background.drawBorders();
     this.checkExplosion();
-    console.log(this.cursor.x, this.cursor.tailX);
+    // console.log(this.ctx.globalAlpha);
     // console.log(this.squares);
     // this.removeComet();
     this.addRandomComet();
@@ -65,11 +65,11 @@ class Engine {
         this.squares[i].update();
         this.cursor.twoSecondImmunity();
 
-        immuneCount++;
-        if (immuneCount >= 600) {
-          immune = false;
-          immuneCount = 0;
-        }
+        // immuneCount++;
+        // if (immuneCount >= 600) {
+        //   immune = false;
+        //   immuneCount = 0;
+        // }
       }
     }
     for (let i = 0; i < this.bonus.length; i++) {
@@ -79,10 +79,18 @@ class Engine {
         bonusSound.cloneNode().play();
         this.bonus.splice(i, 1);
         this.cursor.getLife = true;
+        if (this.cursor.getLife === true) {
+          this.cursor.getLife = false;
+          this.cursor.lives++;
+        }
       } else if (this.bonus[i].checkCollision() === 'power') {
         bonusSound.cloneNode().play();
         this.bonus.splice(i, 1);
         this.cursor.getPower = true;
+        if (this.cursor.getPower === true) {
+          this.cursor.getPower = false;
+          this.cursor.power++;
+        }
       }
     }
   }
@@ -149,18 +157,6 @@ class Engine {
       this.bonus.unshift(new Bonus(this));
       this.bonus[0].spawnSpeedCheck();
       this.bonusTime = this.timestamp;
-      console.log(
-        'bonus added ' +
-          this.bonus[0].x +
-          '  ' +
-          this.bonus[0].y +
-          ' x speed' +
-          this.bonus[0].speedX +
-          ' y speed ' +
-          this.bonus[0].speedY +
-          this.bonus[0].class +
-          this.timestamp
-      );
     }
   }
 
@@ -184,6 +180,7 @@ class Engine {
   reset() {
     this.canvas.classList.add('nocursor');
     // this.showHighest();
+    this.cursor.addImmunity2000();
     bgMusic.play();
     this.squares = [];
     this.counter.intervalId = 0;

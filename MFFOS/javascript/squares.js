@@ -116,7 +116,8 @@ class Square {
       (this.y + this.h / 3 < this.cursor.y + 50 &&
         this.y + this.h / 2 > this.cursor.y) // commented for testing
     ) {
-      immune = true;
+      this.game.cursor.addImmunity1000();
+      // immune = true;
       loseALife = true;
     } else if (
       this.cursor.x <= 30 ||
@@ -124,7 +125,8 @@ class Square {
       this.cursor.y <= 100 ||
       this.cursor.y + 50 >= 700
     ) {
-      immune = true;
+      // immune = true;
+      this.game.cursor.addImmunity1000();
       loseALife = true;
     }
   }

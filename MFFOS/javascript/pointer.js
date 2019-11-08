@@ -57,18 +57,26 @@ class Cursor {
 
   drawCursor() {
     this.ctx.drawImage(kitty, this.x, this.y, 70, 50);
-    if (this.getLife === true) {
-      this.getLife = false;
-      this.lives++;
-    }
-    if (this.getPower === true) {
-      this.getPower = false;
-      this.power++;
-    }
+  }
+
+  addImmunity1000() {
+    immune = true;
+    setTimeout(function() {
+      immune = false;
+    }, 1000);
+  }
+
+  addImmunity2000() {
+    immune = true;
+    setTimeout(function() {
+      immune = false;
+    }, 2000);
   }
 
   twoSecondImmunity() {
+    this.ctx.globalAlpha = 0.6;
     this.ctx.drawImage(kittyImmune, this.x, this.y, 70, 50);
+    this.ctx.globalAlpha = 1;
   }
 
   roarTrigger() {
@@ -122,6 +130,10 @@ class Cursor {
   }
 
   drawTail() {
+    this.ctx.drawImage(this.tail4, this.tailX4e, this.tailY4e + 13, 30, 15);
+    this.ctx.drawImage(this.tail4, this.tailX4d, this.tailY4d + 10, 30, 20);
+    this.ctx.drawImage(this.tail4, this.tailX4c, this.tailY4c + 7, 30, 25);
+    this.ctx.drawImage(this.tail4, this.tailX4b, this.tailY4b + 5, 30, 30);
     this.ctx.drawImage(this.tail4, this.tailX4a, this.tailY4a, 30, 40);
     this.ctx.drawImage(this.tail4, this.tailX4, this.tailY4, 30, 40);
     this.ctx.drawImage(this.tail3, this.tailX3a, this.tailY3a, 30, 40);
@@ -129,12 +141,12 @@ class Cursor {
     this.ctx.drawImage(this.tail2, this.tailX2a, this.tailY2a, 30, 40);
     this.ctx.drawImage(this.tail2, this.tailX2, this.tailY2, 30, 40);
     this.ctx.drawImage(this.tail1, this.tailXa, this.tailYa, 30, 40);
-    this.ctx.drawImage(this.tail1, this.tailX + 10, this.tailY, 30, 40);
-    this.tailX4 = this.tailX3;
-    this.tailY4 = this.tailY3;
-    this.tailX3 = this.tailX2;
-    this.tailY3 = this.tailY2;
-    this.tailX2 = this.tailX;
-    this.tailY2 = this.tailY;
+    this.ctx.drawImage(this.tail1, this.tailX, this.tailY, 30, 40);
+    // this.tailX4 = this.tailX3;
+    // this.tailY4 = this.tailY3;
+    // this.tailX3 = this.tailX2;
+    // this.tailY3 = this.tailY2;
+    // this.tailX2 = this.tailX;
+    // this.tailY2 = this.tailY;
   }
 }

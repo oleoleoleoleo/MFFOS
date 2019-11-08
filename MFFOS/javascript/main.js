@@ -26,7 +26,7 @@ let gameover = new Image();
 gameover.src = './images/gameover.png';
 let immune = false;
 let loseALife = false;
-let bgMusic = new Audio('./audio/boss.ogg');
+let bgMusic = new Audio('./audio/nyan.mp3');
 bgMusic.volume = 0.2;
 bgMusic.loop = true;
 let gameOverSound = new Audio('./audio/GameOver.ogg');
@@ -53,36 +53,52 @@ $canvas.addEventListener('click', () => {
 window.addEventListener('mousemove', e => {
   setTimeout(function() {
     game.cursor.tailX = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY = e.pageY - bounds.top + 3 - scrollY;
   }, 40);
   setTimeout(function() {
     game.cursor.tailXa = e.pageX - bounds.left - scrollX;
-    game.cursor.tailYa = e.pageY - bounds.top - scrollY;
+    game.cursor.tailYa = e.pageY - bounds.top + 3 - scrollY;
   }, 70);
   setTimeout(function() {
     game.cursor.tailX2 = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY2 = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY2 = e.pageY - bounds.top + 3 - scrollY;
   }, 100);
   setTimeout(function() {
     game.cursor.tailX2a = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY2a = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY2a = e.pageY - bounds.top + 3 - scrollY;
   }, 125);
   setTimeout(function() {
     game.cursor.tailX3 = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY3 = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY3 = e.pageY - bounds.top + 3 - scrollY;
   }, 150);
   setTimeout(function() {
     game.cursor.tailX3a = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY3a = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY3a = e.pageY - bounds.top + 3 - scrollY;
   }, 175);
   setTimeout(function() {
     game.cursor.tailX4 = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY4 = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY4 = e.pageY - bounds.top + 3 - scrollY;
   }, 200);
   setTimeout(function() {
     game.cursor.tailX4a = e.pageX - bounds.left - scrollX;
-    game.cursor.tailY4a = e.pageY - bounds.top - scrollY;
+    game.cursor.tailY4a = e.pageY - bounds.top + 3 - scrollY;
   }, 225);
+  setTimeout(function() {
+    game.cursor.tailX4b = e.pageX - bounds.left - scrollX;
+    game.cursor.tailY4b = e.pageY - bounds.top + 3 - scrollY;
+  }, 250);
+  setTimeout(function() {
+    game.cursor.tailX4c = e.pageX - bounds.left - scrollX;
+    game.cursor.tailY4c = e.pageY - bounds.top + 3 - scrollY;
+  }, 275);
+  setTimeout(function() {
+    game.cursor.tailX4d = e.pageX - bounds.left - scrollX;
+    game.cursor.tailY4d = e.pageY - bounds.top + 3 - scrollY;
+  }, 300);
+  setTimeout(function() {
+    game.cursor.tailX4e = e.pageX - bounds.left - scrollX;
+    game.cursor.tailY4e = e.pageY - bounds.top + 3 - scrollY;
+  }, 325);
   let bounds = e.target.getBoundingClientRect();
   game.cursor.x = e.pageX - bounds.left - scrollX; // is window.scrollX same for Y
   game.cursor.y = e.pageY - bounds.top - scrollY;
