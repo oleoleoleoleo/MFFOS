@@ -29,7 +29,7 @@ _The Mutant Feline From Outer Space_ has been written on top of the base code of
 
 You can switch to that mode by clicking the link at the bottom of the page.
 
-The goal is to keep to red square from touching anything and the game will end whenever collision is detected, be it against the black blocks, or the borders of the canvas.
+The goal is to keep the red square from touching anything and the game will end whenever collision is detected, be it against the black blocks, or the borders of the canvas.
 
 A link at the bottom will take you back to the _Mutant Feline From Outer Space_ game.
 
