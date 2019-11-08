@@ -41,7 +41,7 @@ The code for this game has been written in its most part in Javascript with the 
 
 Due to time constraints, the refactoring of the code hasn't been done as of this moment. It should run slightly smoother after a bit of work.
 
-## Authors
+## Author
 Leopoldo Mateus Bolzan Calgaro
 
 ## License
