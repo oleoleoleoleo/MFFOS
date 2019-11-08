@@ -40,6 +40,8 @@ comet3.onload;
 comet4.onload;
 kitty.onload;
 kittyImmune.onload;
+landing.onload;
+gameover.onload;
 // myStorage.clear();
 startScreen();
 $canvas.addEventListener('click', () => {
