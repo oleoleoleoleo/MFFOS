@@ -34,5 +34,5 @@ Leopoldo Mateus Bolzan Calgaro
 ## License
 This project is open source and free to use and or modify for **noncommercial** purposes.
 
-##Acknowledgments
+## Acknowledgments
 Many thanks to the colleagues and TA's from IronHack Lisbon squad 174, without which this game wouldn't have come to light.
