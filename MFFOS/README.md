@@ -5,7 +5,7 @@
 ## Getting Started
 The only thing you need to play the game is to load the index.html from the main folder
 
-##H ow to Play the Game
+## How to Play the Game
 The objective of this game is to keep the poptart cat alive for the longest possible amount of time, and doing so, increasing your total score.
 The base score is directly dependent on the ellapsed time, and every asteroid the cat destroys will add 150 points to your total score.
 At the bottom of the screen the HUD will display the amount of **lives** first, then the amount of **roars** and finally the highest score (local).
