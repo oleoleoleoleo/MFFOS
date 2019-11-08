@@ -14,8 +14,6 @@ At the bottom of the screen the HUD will display the amount of **lives** first, 
 
 The game is over if your life count reaches 0. You are able to destroy the nearby comets with the cat's roar by using the left-click button on your mouse.
 
-Right-click is disabled on canvas.
-
 Right after losing a life, the cat will have one second of immunity in which no damage will be inflicted.
 
 You lose a life by colliding against asteroids or touching the edges of the canvas.
@@ -23,6 +21,8 @@ You lose a life by colliding against asteroids or touching the edges of the canv
 There are bonuses. The orange colored cupcake will add one life to your life count, the blue cupcake will add a roar to the roar count.
 
 An asteroid will be spawned every second. Bonuses spawn every three seconds.
+
+Right-click is disabled on canvas. Overflow is set to hidden on CSS, no scroll bars or bookmarks will be shown. 
 
 ### The raw unadultered extremely hard mode
 _The Mutant Feline From Outer Space_ has been written on top of the base code of the _raw unadultered extremely hard mode_.
