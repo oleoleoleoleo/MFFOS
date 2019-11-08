@@ -34,6 +34,12 @@ let lionRoar = new Audio('./audio/lion.mp3');
 let kittyCry = new Audio('./audio/kittyroar.mp3');
 let kittyHurt = new Audio('./audio/Meow.ogg');
 let bonusSound = new Audio('./audio/FX326.wav');
+comet1.onload;
+comet2.onload;
+comet3.onload;
+comet4.onload;
+kitty.onload;
+kittyImmune.onload;
 // myStorage.clear();
 startScreen();
 $canvas.addEventListener('click', () => {
