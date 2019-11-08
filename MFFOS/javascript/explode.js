@@ -8,9 +8,9 @@ class Explode {
     this.d = d;
     this.count = -1;
     // this.i = 0;
-    this.explosion = new Image();
-    this.explosion.src = './images/explosion.png';
-    this.explosion.onload;
+//     this.explosion = new Image();
+//     this.explosion.src = './images/explosion.png';
+//     this.explosion.onload;
     this.explodeArray = [
       [192, 192],
       [128, 192],
@@ -37,7 +37,7 @@ class Explode {
   draw() {
     if (this.count < 16) {
       this.ctx.drawImage(
-        this.explosion,
+        explosion,
         this.explodeArray[this.count][0],
         this.explodeArray[this.count][1],
         64,
